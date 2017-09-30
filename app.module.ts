@@ -5,12 +5,15 @@ import { HttpModule } from '@angular/http';
 import {RouterModule} from '@angular/router';
 import { RootComponent } from './app.component';
 import { DropDownService } from './drop-down.service';
+import {AppRoutingModule} from './app-routing.module'
+import {routingComponents} from './app-routing.module'
+
 
 
 // this module is provided by the cli
 @NgModule({
   declarations: [
-    RootComponent,
+    RootComponent,routingComponents
  
     
 
@@ -18,7 +21,8 @@ import { DropDownService } from './drop-down.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [DropDownService],
   bootstrap: [RootComponent]
